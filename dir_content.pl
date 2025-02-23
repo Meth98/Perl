@@ -6,7 +6,7 @@ use strict;
 use Term::ANSIColor;
 use Cwd qw(cwd);                # library to know the path
 
-my (@object, @file, @dir);
+my (@object, @file, @dir) = ();
 
 if (($#ARGV + 1) ne 1) {
         print "Warning!! You should put the system directory path (e.g. /usr), where you want to know the content!\n";
@@ -19,7 +19,7 @@ if (($#ARGV + 1) ne 1) {
                 print "\nProcessing...\n";
                 print color "reset";
                 sleep 2;
-                @object = glob "*";              # put all dir object, in an array
+                @object = glob "*";              # put all dir objects in an array
 
                 foreach (@object) {
                         if (-d $_) {
