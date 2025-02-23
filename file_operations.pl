@@ -10,7 +10,7 @@ use File::Copy;
 
 my ($create, $upper, $truncate, $remove, $read, $copy);
 my $size;
-my @new;
+my @new = ();
 my $upper_case;
 my $answer;
 
@@ -35,7 +35,7 @@ if (($#ARGV + 1) ne 2) {
 
         if (! $create and ! $upper and ! $truncate and ! $remove and ! $read and ! $copy) {
                 print color "bold red";
-                print "Option not recognized by this program!";
+                print "\nOption not recognized by this program!\n";
                 print color "reset";
                 &print_usage;
         }
